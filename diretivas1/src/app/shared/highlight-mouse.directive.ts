@@ -1,4 +1,3 @@
-import { element } from 'protractor';
 import { Directive,HostListener,ElementRef,Renderer,HostBinding } from '@angular/core';
 
 @Directive({
