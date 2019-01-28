@@ -10,8 +10,9 @@ import { DiretivaNgclassComponent } from './diretiva-ngclass/diretiva-ngclass.co
 import { DiretivaNgstyleComponent } from './diretiva-ngstyle/diretiva-ngstyle.component';
 import { OperadorElvisComponent } from './operador-elvis/operador-elvis.component';
 import { ExemploNgContentComponent } from './exemplo-ng-content/exemplo-ng-content.component';
-import { SharedDirective } from './shared.directive';
+
 import { FundoAmareloDirective } from './shared/fundo-amarelo.directive';
+import { DiretivaCustomizadasComponent } from './diretiva-customizadas/diretiva-customizadas.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +27,10 @@ import { FundoAmareloDirective } from './shared/fundo-amarelo.directive';
     OperadorElvisComponent,
     
     ExemploNgContentComponent,
+        
+    FundoAmareloDirective,
     
-    SharedDirective,
-    
-    FundoAmareloDirective
+    DiretivaCustomizadasComponent
   ],
   imports: [
     BrowserModule,
