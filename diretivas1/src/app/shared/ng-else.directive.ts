@@ -1,10 +1,24 @@
-import { Directive } from '@angular/core';
+import { Directive, Input,TemplateRef,ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[appNgElse]'
+  selector: '[ngElse]'
 })
 export class NgElseDirective {
 
-  constructor() { }
+  @Input() set ngElse(condition:boolean)
+  {
+    if(!condition)
+    {
+      this.viewContainerRef.createEmbeddedView(this.templateref);
+    }
+    else{
+      this.viewContainerRef.clear();
+    }
+  }
+
+  constructor(
+    private templateref: TemplateRef<any>,
+    private viewContainerRef: ViewContainerRef
+  ) { }
 
 }
