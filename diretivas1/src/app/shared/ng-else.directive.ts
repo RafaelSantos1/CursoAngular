@@ -5,7 +5,7 @@ import { Directive, Input,TemplateRef,ViewContainerRef } from '@angular/core';
 })
 export class NgElseDirective {
 
-  @Input() set ngElse(condition:boolean)
+  @Input() set ngElse(condition: boolean)
   {
     if(!condition)
     {
