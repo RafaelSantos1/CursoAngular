@@ -1,3 +1,4 @@
+import { CursosService } from './cursos.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CursosComponent implements OnInit {
 
-  constructor() { }
+  cursos: string[] ;
+  cursosService: CursosService;
+
+  constructor(private _cursosService: CursosService) {
+    // this.cursosService = new CursosService();
+     this.cursosService = _cursosService;
+   }
 
   ngOnInit() {
+    this.cursos = this.cursosService.getCursos();
   }
 
 }
