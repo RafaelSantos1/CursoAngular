@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { CursosComponent } from './cursos/cursos.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,7 @@ import { CursosComponent } from './cursos/cursos.component';
     AppRoutingModule,
     CriarCursoModule
   ],
-  providers: [CursosService],
+ // providers: [CursosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
