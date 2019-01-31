@@ -1,9 +1,18 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class CursosService{
-    getCursos()
+export class CursosService {
+
+    private cursos: string[] = ['Angular', 'BootStrap', 'Java', 'PHP' ];
+    constructor() {
+        console.log('CursosService');
+    }
+
+    getCursos() {
+        return this.cursos;
+    }
+    addCurso(curso: string)
     {
-        return ['Angular', 'BootStrap', 'Java', 'PHP' ];
+        this.cursos.push(curso);
     }
 }
