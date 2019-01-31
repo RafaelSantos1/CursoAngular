@@ -8,19 +8,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CursosComponent } from './cursos/cursos.component';
 
+import {LogService} from './shared/log.service';
+import { ExemplosPipesComponent } from './exemplos-pipes/exemplos-pipes.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CursosComponent,
+    ExemplosPipesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CriarCursoModule
   ],
- // providers: [CursosService],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
