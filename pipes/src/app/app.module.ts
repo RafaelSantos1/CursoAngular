@@ -14,6 +14,7 @@ import { ExemploPipesComponent } from './exemplo-pipes/exemplo-pipes.component';
 import { CamelCasePipe } from './camel-case.pipe';
 
 import { FiltroArrayPipe } from './filtro-array.pipe';
+import { FiltroArrayImpuroPipe } from './filtro-array-impuro.pipe';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { FiltroArrayPipe } from './filtro-array.pipe';
     ExemploPipesComponent,
     CamelCasePipe,
     FiltroArrayPipe,
+    FiltroArrayImpuroPipe,
   ],
   imports: [
     BrowserModule,

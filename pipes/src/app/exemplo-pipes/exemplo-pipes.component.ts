@@ -20,11 +20,26 @@ export class ExemploPipesComponent implements OnInit {
 
   filtro: string;
 
-  addCurso(valor)
-  {
+  obterCursos(){
+
+    if (this.livros.length === 0 || this.filtro === undefined
+    || this.filtro.trim() === '') {
+      return this.livros;
+    }
+
+    return this.livros.filter(
+       v => v.toLocaleLowerCase().includes(this.filtro.toLocaleLowerCase())
+    );
+  }
+
+  addCurso(valor) {
     this.livros.push(valor);
     console.log(this.livros);
   }
+
+  valorAsync = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Valor assíncrono'), 2000)
+  });
 
   constructor() { }
 
