@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+
+// INSTEAD of
+
+
 @Component({
   selector: 'app-exemplo-pipes',
   templateUrl: './exemplo-pipes.component.html',
@@ -20,7 +24,7 @@ export class ExemploPipesComponent implements OnInit {
 
   filtro: string;
 
-  obterCursos(){
+  obterCursos() {
 
     if (this.livros.length === 0 || this.filtro === undefined
     || this.filtro.trim() === '') {
@@ -40,6 +44,8 @@ export class ExemploPipesComponent implements OnInit {
   valorAsync = new Promise((resolve, reject) => {
     setTimeout(() => resolve('Valor assíncrono'), 2000)
   });
+
+  
 
   constructor() { }
 
