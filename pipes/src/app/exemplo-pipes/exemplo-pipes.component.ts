@@ -16,6 +16,15 @@ export class ExemploPipesComponent implements OnInit {
     url: 'http://a.co/glqjpRP'
   };
 
+  livros: string[] = ['Harry Potter', 'Sherlock', 'As Crônicas de Nárnia'];
+
+  filtro: string;
+
+  addCurso(valor)
+  {
+    this.livros.push(valor);
+    console.log(this.livros);
+  }
 
   constructor() { }
 

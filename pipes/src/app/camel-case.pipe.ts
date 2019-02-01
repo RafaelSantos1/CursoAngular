@@ -8,7 +8,6 @@ export class CamelCasePipe implements PipeTransform {
   transform(value: any, args?: any): any {
     let values = value.split(' ');
     let result = '';
-    
     for (let v of values) {
       result += this.capitalize(v) + ' ';
     }
