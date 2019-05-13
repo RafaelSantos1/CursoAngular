@@ -1,3 +1,4 @@
+import { AlunosRoutingModule } from './alunos/alunos.routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -9,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 import { CursosService } from './cursos/cursos.service';
+import { AlunosModule } from './alunos/alunos.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { CursosService } from './cursos/cursos.service';
   ],
   imports: [
     BrowserModule,
+    AlunosModule,
+    AlunosRoutingModule,
     AppRoutingModule,
     routing
   ],
